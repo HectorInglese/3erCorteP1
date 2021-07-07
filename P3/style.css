@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root{
+    --primarycolor: rgb(95, 89, 89);
+    --secondcolor: rgb(197, 188, 188);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
+}
+
+.logo h1 {
+    text-transform: uppercase; 
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-links ul li{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav-links ul li a{
+    color: rgb(0, 0, 0);
+}
+
+.nav-links ul li a:hover{
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: width .2s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+    transition: width .2s ease-out;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: honeydew;
+}
+
+.herocontent{
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top:60px;
+    padding: 60px;
+}
+
+.tabla{
+    border-collapse: collapse;
+    width:400px ;
+    height: 400px;
+    background-color: var(--secondcolor);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px 5px rgba(68, 68, 68, 0.179);
+    margin: 25px auto;
+
+}
+
+.tabla thead tr{
+   border-bottom: 2px dashed grey;
+}
+
+
+.tabla tfoot tr{
+    border-top: 2px dashed grey;
+ }
+
+.tabla thead tr td{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    padding: 8px;
+    background-color: var(--primarycolor);
+}
+
+
+.tabla tfoot tr td{
+    text-align: center;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: black;
+    background-color: var(--primarycolor);
+    padding: 8px;
+    height: 20px;
+}
+
+.tabla tbody tr td{
+    text-align: center;
+    padding: 8px;
+}
+
+.tabla tbody tr td label{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.tabla tbody tr td input{
+    width: 95%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.tabla tfoot tr td button{
+    display: flex;
+    margin: auto;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    background-color: rgba(220, 216, 216, 0.686);
+    width: 35%;
+    height: 80%;
+    border-radius: 12px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+

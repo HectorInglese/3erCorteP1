@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
+}
+
+.logo h1 {
+    text-transform: uppercase; 
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-links ul li{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav-links ul li a{
+    color: rgb(0, 0, 0);
+}
+
+.nav-links ul li a:hover{
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: width .2s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+    transition: width .2s ease-out;
+}
+
+.blur{
+    background: rgba(158, 157, 157, 0.4);
+    backdrop-filter: blur(8px); 
+    height:100vh;
+    width:100%;
+   z-index: 0;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/imagenes/hero-background.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
+
+.herocontent{
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 24px;
+    align-items: center;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.herocontent h1{
+    margin-top: 30vh;
+    font-size:4rem;
+    text-transform: uppercase;
+}
+
+.herocontent p{
+    margin-top: 10px;
+    font-size: 1.6rem;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.herocontent a{
+    margin: auto;
+    padding: 10px;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    background:rgba(255, 255, 255, 0.261); 
+     font-size: 1.2rem ;
+    text-transform: uppercase;
+    transition: font-size .2s;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.herocontent a:hover{
+    background:rgba(255, 255, 255, 0.775);
+    font-size: 1.3rem ; 
+    font-weight: 600;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
